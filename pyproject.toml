@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-doctor-cli"
+version = "0.1.0"
+description = "A tiny zero-dependency CLI that checks the basic health of a code repository."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["cli", "github", "repository", "developer-tools"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+repo-doctor = "repo_doctor:main"
+
+[tool.setuptools]
+py-modules = ["repo_doctor"]
